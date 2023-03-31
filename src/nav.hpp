@@ -9,6 +9,8 @@
 #include <QLabel>
 #include <QCalendar>
 #include <QDateTime>
+#include <QLayout>
+#include <QPushButton>
 
 
 class nav: public QWidget {
@@ -16,6 +18,9 @@ Q_OBJECT
 public:
     nav(QWidget *parent = nullptr);
     ~nav();
+
+private:
+    QString getDateString();
 };
 
 

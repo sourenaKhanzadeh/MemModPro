@@ -24,3 +24,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Core Qt6::Gui
 target_include_directories(${PROJECT_NAME} PRIVATE
     src
     )
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/res DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
