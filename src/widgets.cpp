@@ -5,8 +5,8 @@
 #include "widgets.hpp"
 
 widgets::widgets(QWidget *parent) : QWidget(parent) {
-    QLabel *label = new QLabel("Hello World", this);
-    label->show();
+    nav *n = new nav(this);
+    n->show();
 }
 
 widgets::~widgets() = default;

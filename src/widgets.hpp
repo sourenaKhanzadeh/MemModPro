@@ -7,6 +7,9 @@
 
 #include <QWidget>
 #include <QLabel>
+#include <QCalendar>
+#include <QDateTime>
+#include "nav.hpp"
 
 class widgets: public QWidget {
 Q_OBJECT
