@@ -12,8 +12,15 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_PREFIX_PATH "~/Qt/6.4.2/macos/lib/cmake")
 find_package(Qt6 REQUIRED COMPONENTS Widgets Core Gui)
 
+add_subdirectory(src)
+
 add_executable(${PROJECT_NAME}
         main.cpp
         )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Core Qt6::Gui)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Core Qt6::Gui
+    widgets)
+
+target_include_directories(${PROJECT_NAME} PRIVATE
+    src
+    )

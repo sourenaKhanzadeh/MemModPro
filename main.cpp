@@ -4,11 +4,12 @@
 
 #include <QApplication>
 #include <QLabel>
+#include <widgets.hpp>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    QLabel *label = new QLabel("Hello World!");
-    label->show();
+    widgets w;
+    w.show();
     return app.exec();
 }
