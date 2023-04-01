@@ -7,7 +7,11 @@
 widgets::widgets(QWidget *parent) : QWidget(parent) {
     nav *n = new nav(this);
     n->show();
-    setContentsMargins(0, 0, 0, 0);
+    QVBoxLayout *layout = new QVBoxLayout(this);
+    layout->addWidget(n, 1);
+
+    setLayout(layout);
+
 }
 
 widgets::~widgets() = default;

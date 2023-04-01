@@ -6,18 +6,15 @@
 
 nav::nav(QWidget *parent) : QWidget(parent) {
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-    setMinimumHeight(50);
-    setMaximumHeight(50);
 
     QLabel *label = new QLabel(this);
     label->setText(getDateString());
-    label->setGeometry(10, 10, 0, 0);
 
-    QIcon icon;
-    icon.addFile("res/cpu.png", QSize(), QIcon::Normal, QIcon::Off);
+    QIcon processIcon;
+    processIcon.addFile("res/cpu.png", QSize(), QIcon::Normal, QIcon::Off);
 
     QPushButton *button = new QPushButton(this);
-    button->setIcon(icon);
+    button->setIcon(processIcon);
     button->setIconSize(QSize(30, 30));
     button->setFlat(true);
 
@@ -30,6 +27,8 @@ nav::nav(QWidget *parent) : QWidget(parent) {
 
     setLayout(layout);
     resize(500, 50);
+
+
 
 }
 
