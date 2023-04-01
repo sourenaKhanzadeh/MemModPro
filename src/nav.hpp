@@ -16,11 +16,13 @@
 class nav: public QWidget {
 Q_OBJECT
 public:
-    nav(QWidget *parent = nullptr);
-    ~nav();
+    explicit nav(QWidget *parent = nullptr);
+    ~nav() override;
 
 private:
     QString getDateString();
+
+    void processButtonClicked();
 };
 
 

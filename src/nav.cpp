@@ -17,6 +17,9 @@ nav::nav(QWidget *parent) : QWidget(parent) {
     button->setIcon(processIcon);
     button->setIconSize(QSize(30, 30));
     button->setFlat(true);
+    connect(button, &QPushButton::clicked, this, [=] {
+        emit processButtonClicked();
+    });
 
     QHBoxLayout *layout = new QHBoxLayout(this);
     // make the layout take up the whole window horizontally
@@ -40,6 +43,15 @@ QString nav::getDateString() {
     QString dayName = calendar->weekDayName(locale, date.dayOfWeek());
     QString dateText = dayName + ", " + monthName + " " + QString::number(date.day()) + ", " + QString::number(date.year());
     return dateText;
+}
+
+void nav::processButtonClicked() {
+    // make a new window
+    QWidget *window = new QWidget();
+    window->setWindowTitle("Process");
+    window->setWindowIcon(QIcon("res/cpu.png"));
+    window->setFixedSize(300, 500);
+    window->show();
 }
 
 nav::~nav() = default;
