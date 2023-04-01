@@ -11,6 +11,7 @@
 #include <QDateTime>
 #include <QLayout>
 #include <QPushButton>
+#include "process.hpp"
 
 
 class nav: public QWidget {

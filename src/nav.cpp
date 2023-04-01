@@ -47,10 +47,7 @@ QString nav::getDateString() {
 
 void nav::processButtonClicked() {
     // make a new window
-    QWidget *window = new QWidget();
-    window->setWindowTitle("Process");
-    window->setWindowIcon(QIcon("res/cpu.png"));
-    window->setFixedSize(300, 500);
+    process *window = new process();
     window->show();
 }
 
